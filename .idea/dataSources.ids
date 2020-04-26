@@ -1,0 +1,1576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - gmall_study@192.168.1.186" uuid="f460e86e-8bd8-496d-90f9-18156ab2269e">
+    <database-info product="MySQL" version="5.5.5-10.3.7-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
+      <schema id="1" name="gmall_study"/>
+      <table id="2" parent="1" name="oms_cart_item">
+        <comment>购物车表</comment>
+      </table>
+      <table id="3" parent="1" name="oms_company_address">
+        <comment>公司收发货地址表</comment>
+      </table>
+      <table id="4" parent="1" name="oms_order">
+        <comment>订单表</comment>
+      </table>
+      <table id="5" parent="1" name="oms_order_item">
+        <comment>订单中所包含的商品</comment>
+      </table>
+      <table id="6" parent="1" name="payment_info">
+        <comment>支付信息表</comment>
+      </table>
+      <table id="7" parent="1" name="pms_base_attr_info">
+        <comment>属性表</comment>
+      </table>
+      <table id="8" parent="1" name="pms_base_attr_value">
+        <comment>属性值表</comment>
+      </table>
+      <table id="9" parent="1" name="pms_base_catalog1">
+        <comment>一级分类表</comment>
+      </table>
+      <table id="10" parent="1" name="pms_base_catalog2"/>
+      <table id="11" parent="1" name="pms_base_catalog3"/>
+      <table id="12" parent="1" name="pms_base_sale_attr"/>
+      <table id="13" parent="1" name="pms_brand">
+        <comment>品牌表</comment>
+      </table>
+      <table id="14" parent="1" name="pms_comment">
+        <comment>商品评价表</comment>
+      </table>
+      <table id="15" parent="1" name="pms_comment_replay">
+        <comment>产品评价回复表</comment>
+      </table>
+      <table id="16" parent="1" name="pms_product_image">
+        <comment>商品图片表</comment>
+      </table>
+      <table id="17" parent="1" name="pms_product_info"/>
+      <table id="18" parent="1" name="pms_product_sale_attr"/>
+      <table id="19" parent="1" name="pms_product_sale_attr_value">
+        <comment>spu销售属性值</comment>
+      </table>
+      <table id="20" parent="1" name="pms_product_vertify_record">
+        <comment>商品审核记录</comment>
+      </table>
+      <table id="21" parent="1" name="pms_sku_attr_value">
+        <comment>sku平台属性值关联表</comment>
+      </table>
+      <table id="22" parent="1" name="pms_sku_image">
+        <comment>库存单元图片表</comment>
+      </table>
+      <table id="23" parent="1" name="pms_sku_info">
+        <comment>库存单元表</comment>
+      </table>
+      <table id="24" parent="1" name="pms_sku_sale_attr_value">
+        <comment>sku销售属性值</comment>
+      </table>
+      <table id="25" parent="1" name="ums_member">
+        <comment>会员表</comment>
+      </table>
+      <table id="26" parent="1" name="ums_member_level">
+        <comment>会员等级表</comment>
+      </table>
+      <table id="27" parent="1" name="ums_member_receive_address">
+        <comment>会员收货地址表</comment>
+      </table>
+      <table id="28" parent="1" name="wms_ware_info"/>
+      <table id="29" parent="1" name="wms_ware_order_task">
+        <comment>库存工作单表 库存工作单表</comment>
+      </table>
+      <table id="30" parent="1" name="wms_ware_order_task_detail"/>
+      <table id="31" parent="1" name="wms_ware_sku"/>
+      <column id="32" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="33" parent="2" name="product_id">
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="34" parent="2" name="product_sku_id">
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="35" parent="2" name="member_id">
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="36" parent="2" name="quantity">
+        <comment>购买数量</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="37" parent="2" name="price">
+        <comment>添加到购物车的价格</comment>
+        <data-type>decimal(10,2)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="38" parent="2" name="sp1">
+        <comment>销售属性1</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="39" parent="2" name="sp2">
+        <comment>销售属性2</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="40" parent="2" name="sp3">
+        <comment>销售属性3</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="41" parent="2" name="product_pic">
+        <comment>商品主图</comment>
+        <data-type>varchar(1000)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="42" parent="2" name="product_name">
+        <comment>商品名称</comment>
+        <data-type>varchar(500)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="43" parent="2" name="product_sub_title">
+        <comment>商品副标题（卖点）</comment>
+        <data-type>varchar(500)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="44" parent="2" name="product_sku_code">
+        <comment>商品sku条码</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="45" parent="2" name="member_nickname">
+        <comment>会员昵称</comment>
+        <data-type>varchar(500)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="46" parent="2" name="create_date">
+        <comment>创建时间</comment>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="47" parent="2" name="modify_date">
+        <comment>修改时间</comment>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="48" parent="2" name="delete_status">
+        <comment>是否删除</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="49" parent="2" name="product_category_id">
+        <comment>商品分类</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="50" parent="2" name="product_brand">
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="51" parent="2" name="product_sn">
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="52" parent="2" name="product_attr">
+        <comment>商品销售属性:[{&quot;key&quot;:&quot;颜色&quot;,&quot;value&quot;:&quot;颜色&quot;},{&quot;key&quot;:&quot;容量&quot;,&quot;value&quot;:&quot;4G&quot;}]</comment>
+        <data-type>varchar(500)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="53" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="54" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="55" parent="3" name="address_name">
+        <comment>地址名称</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="56" parent="3" name="send_status">
+        <comment>默认发货地址：0-&gt;否；1-&gt;是</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="57" parent="3" name="receive_status">
+        <comment>是否默认收货地址：0-&gt;否；1-&gt;是</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="58" parent="3" name="name">
+        <comment>收发货人姓名</comment>
+        <data-type>varchar(64)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="59" parent="3" name="phone">
+        <comment>收货人电话</comment>
+        <data-type>varchar(64)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="60" parent="3" name="province">
+        <comment>省/直辖市</comment>
+        <data-type>varchar(64)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="61" parent="3" name="city">
+        <comment>市</comment>
+        <data-type>varchar(64)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="62" parent="3" name="region">
+        <comment>区</comment>
+        <data-type>varchar(64)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="63" parent="3" name="detail_address">
+        <comment>详细地址</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="64" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="65" parent="4" name="id">
+        <comment>订单id</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="66" parent="4" name="member_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="67" parent="4" name="coupon_id">
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="68" parent="4" name="order_sn">
+        <comment>订单编号</comment>
+        <data-type>varchar(64)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="69" parent="4" name="create_time">
+        <comment>提交时间</comment>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="70" parent="4" name="member_username">
+        <comment>用户帐号</comment>
+        <data-type>varchar(64)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="71" parent="4" name="total_amount">
+        <comment>订单总金额</comment>
+        <data-type>decimal(10,2)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="72" parent="4" name="pay_amount">
+        <comment>应付金额（实际支付金额）</comment>
+        <data-type>decimal(10,2)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="73" parent="4" name="freight_amount">
+        <comment>运费金额</comment>
+        <data-type>decimal(10,2)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="74" parent="4" name="promotion_amount">
+        <comment>促销优化金额（促销价、满减、阶梯价）</comment>
+        <data-type>decimal(10,2)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="75" parent="4" name="integration_amount">
+        <comment>积分抵扣金额</comment>
+        <data-type>decimal(10,2)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="76" parent="4" name="coupon_amount">
+        <comment>优惠券抵扣金额</comment>
+        <data-type>decimal(10,2)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="77" parent="4" name="discount_amount">
+        <comment>管理员后台调整订单使用的折扣金额</comment>
+        <data-type>decimal(10,2)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="78" parent="4" name="pay_type">
+        <comment>支付方式：0-&gt;未支付；1-&gt;支付宝；2-&gt;微信</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="79" parent="4" name="source_type">
+        <comment>订单来源：0-&gt;PC订单；1-&gt;app订单</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="80" parent="4" name="status">
+        <comment>订单状态：0-&gt;待付款；1-&gt;待发货；2-&gt;已发货；3-&gt;已完成；4-&gt;已关闭；5-&gt;无效订单</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="81" parent="4" name="order_type">
+        <comment>订单类型：0-&gt;正常订单；1-&gt;秒杀订单</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="82" parent="4" name="delivery_company">
+        <comment>物流公司(配送方式)</comment>
+        <data-type>varchar(64)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="83" parent="4" name="delivery_sn">
+        <comment>物流单号</comment>
+        <data-type>varchar(64)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="84" parent="4" name="auto_confirm_day">
+        <comment>自动确认时间（天）</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="85" parent="4" name="integration">
+        <comment>可以获得的积分</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="86" parent="4" name="growth">
+        <comment>可以活动的成长值</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="87" parent="4" name="promotion_info">
+        <comment>活动信息</comment>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="88" parent="4" name="bill_type">
+        <comment>发票类型：0-&gt;不开发票；1-&gt;电子发票；2-&gt;纸质发票</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="89" parent="4" name="bill_header">
+        <comment>发票抬头</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="90" parent="4" name="bill_content">
+        <comment>发票内容</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="91" parent="4" name="bill_receiver_phone">
+        <comment>收票人电话</comment>
+        <data-type>varchar(32)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="92" parent="4" name="bill_receiver_email">
+        <comment>收票人邮箱</comment>
+        <data-type>varchar(64)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="93" parent="4" name="receiver_name">
+        <comment>收货人姓名</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="94" parent="4" name="receiver_phone">
+        <comment>收货人电话</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(32)</data-type>
+      </column>
+      <column id="95" parent="4" name="receiver_post_code">
+        <comment>收货人邮编</comment>
+        <data-type>varchar(32)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="96" parent="4" name="receiver_province">
+        <comment>省份/直辖市</comment>
+        <data-type>varchar(32)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="97" parent="4" name="receiver_city">
+        <comment>城市</comment>
+        <data-type>varchar(32)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="98" parent="4" name="receiver_region">
+        <comment>区</comment>
+        <data-type>varchar(32)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="99" parent="4" name="receiver_detail_address">
+        <comment>详细地址</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="100" parent="4" name="note">
+        <comment>订单备注</comment>
+        <data-type>varchar(500)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="101" parent="4" name="confirm_status">
+        <comment>确认收货状态：0-&gt;未确认；1-&gt;已确认</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="102" parent="4" name="delete_status">
+        <comment>删除状态：0-&gt;未删除；1-&gt;已删除</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="103" parent="4" name="use_integration">
+        <comment>下单时使用的积分</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="104" parent="4" name="payment_time">
+        <comment>支付时间</comment>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="105" parent="4" name="delivery_time">
+        <comment>发货时间</comment>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="106" parent="4" name="receive_time">
+        <comment>确认收货时间</comment>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="107" parent="4" name="comment_time">
+        <comment>评价时间</comment>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="108" parent="4" name="modify_time">
+        <comment>修改时间</comment>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="109" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="110" parent="5" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="111" parent="5" name="order_id">
+        <comment>订单id</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="112" parent="5" name="order_sn">
+        <comment>订单编号</comment>
+        <data-type>varchar(64)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="113" parent="5" name="product_id">
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="114" parent="5" name="product_pic">
+        <data-type>varchar(500)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="115" parent="5" name="product_name">
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="116" parent="5" name="product_brand">
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="117" parent="5" name="product_sn">
+        <data-type>varchar(64)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="118" parent="5" name="product_price">
+        <comment>销售价格</comment>
+        <data-type>decimal(10,2)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="119" parent="5" name="product_quantity">
+        <comment>购买数量</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="120" parent="5" name="product_sku_id">
+        <comment>商品sku编号</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="121" parent="5" name="product_sku_code">
+        <comment>商品sku条码</comment>
+        <data-type>varchar(50)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="122" parent="5" name="product_category_id">
+        <comment>商品分类id</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="123" parent="5" name="sp1">
+        <comment>商品的销售属性</comment>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="124" parent="5" name="sp2">
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="125" parent="5" name="sp3">
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="126" parent="5" name="promotion_name">
+        <comment>商品促销名称</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="127" parent="5" name="promotion_amount">
+        <comment>商品促销分解金额</comment>
+        <data-type>decimal(10,2)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="128" parent="5" name="coupon_amount">
+        <comment>优惠券优惠分解金额</comment>
+        <data-type>decimal(10,2)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="129" parent="5" name="integration_amount">
+        <comment>积分优惠分解金额</comment>
+        <data-type>decimal(10,2)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="130" parent="5" name="real_amount">
+        <comment>该商品经过优惠后的分解金额</comment>
+        <data-type>decimal(10,2)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="131" parent="5" name="gift_integration">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="132" parent="5" name="gift_growth">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="133" parent="5" name="product_attr">
+        <comment>商品销售属性:[{&quot;key&quot;:&quot;颜色&quot;,&quot;value&quot;:&quot;颜色&quot;},{&quot;key&quot;:&quot;容量&quot;,&quot;value&quot;:&quot;4G&quot;}]</comment>
+        <data-type>varchar(500)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="134" parent="5" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="135" parent="6" name="id">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="136" parent="6" name="order_sn">
+        <comment>对外业务编号</comment>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="137" parent="6" name="order_id">
+        <comment>订单编号</comment>
+        <data-type>varchar(50)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="138" parent="6" name="alipay_trade_no">
+        <comment>支付宝交易编号</comment>
+        <data-type>varchar(50)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="139" parent="6" name="total_amount">
+        <comment>支付金额</comment>
+        <data-type>decimal(10,2)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="140" parent="6" name="subject">
+        <comment>交易内容</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="141" parent="6" name="payment_status">
+        <comment>支付状态</comment>
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="142" parent="6" name="create_time">
+        <comment>创建时间</comment>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="143" parent="6" name="confirm_time">
+        <comment>创建时间</comment>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="144" parent="6" name="callback_content">
+        <comment>回调信息</comment>
+        <data-type>varchar(4000)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="145" parent="6" name="callback_time">
+        <data-type>datetime</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="146" parent="6" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="147" parent="7" name="id">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="148" parent="7" name="attr_name">
+        <comment>属性名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="149" parent="7" name="catalog3_id">
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="150" parent="7" name="is_enabled">
+        <comment>启用：1 停用：0</comment>
+        <data-type>varchar(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="151" parent="7" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="152" parent="8" name="id">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="153" parent="8" name="value_name">
+        <comment>属性值名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="154" parent="8" name="attr_id">
+        <comment>属性id</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="155" parent="8" name="is_enabled">
+        <comment>启用：1 停用：0 1</comment>
+        <data-type>varchar(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="156" parent="8" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="157" parent="9" name="id">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="158" parent="9" name="name">
+        <comment>分类名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <key id="159" parent="9" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="160" parent="10" name="id">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="161" parent="10" name="name">
+        <comment>二级分类名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="162" parent="10" name="catalog1_id">
+        <comment>一级分类编号</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="163" parent="10" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="164" parent="11" name="id">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="165" parent="11" name="name">
+        <comment>三级分类名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="166" parent="11" name="catalog2_id">
+        <comment>二级分类编号</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="167" parent="11" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="168" parent="12" name="id">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="169" parent="12" name="name">
+        <comment>销售属性名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <key id="170" parent="12" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="171" parent="13" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="172" parent="13" name="name">
+        <data-type>varchar(64)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="173" parent="13" name="first_letter">
+        <comment>首字母</comment>
+        <data-type>varchar(8)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="174" parent="13" name="sort">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="175" parent="13" name="factory_status">
+        <comment>是否为品牌制造商：0-&gt;不是；1-&gt;是</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="176" parent="13" name="show_status">
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="177" parent="13" name="product_count">
+        <comment>产品数量</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="178" parent="13" name="product_comment_count">
+        <comment>产品评论数量</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="179" parent="13" name="logo">
+        <comment>品牌logo</comment>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="180" parent="13" name="big_pic">
+        <comment>专区大图</comment>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="181" parent="13" name="brand_story">
+        <comment>品牌故事</comment>
+        <data-type>text</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="182" parent="13" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="183" parent="14" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="184" parent="14" name="product_id">
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="185" parent="14" name="member_nick_name">
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="186" parent="14" name="product_name">
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="187" parent="14" name="star">
+        <comment>评价星数：0-&gt;5</comment>
+        <data-type>int(3)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="188" parent="14" name="member_ip">
+        <comment>评价的ip</comment>
+        <data-type>varchar(64)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="189" parent="14" name="create_time">
+        <data-type>datetime</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="190" parent="14" name="show_status">
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="191" parent="14" name="product_attribute">
+        <comment>购买时的商品属性</comment>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="192" parent="14" name="collect_couont">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="193" parent="14" name="read_count">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="194" parent="14" name="content">
+        <data-type>text</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="195" parent="14" name="pics">
+        <comment>上传图片地址，以逗号隔开</comment>
+        <data-type>varchar(1000)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="196" parent="14" name="member_icon">
+        <comment>评论用户头像</comment>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="197" parent="14" name="replay_count">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="198" parent="14" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="199" parent="15" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="200" parent="15" name="comment_id">
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="201" parent="15" name="member_nick_name">
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="202" parent="15" name="member_icon">
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="203" parent="15" name="content">
+        <data-type>varchar(1000)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="204" parent="15" name="create_time">
+        <data-type>datetime</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="205" parent="15" name="type">
+        <comment>评论人员类型；0-&gt;会员；1-&gt;管理员</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="206" parent="15" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="207" parent="16" name="id">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="208" parent="16" name="product_id">
+        <comment>商品id</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="209" parent="16" name="img_name">
+        <comment>图片名称</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="210" parent="16" name="img_url">
+        <comment>图片路径</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="211" parent="16" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="212" parent="17" name="id">
+        <comment>商品id</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="213" parent="17" name="product_name">
+        <comment>商品名称</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="214" parent="17" name="description">
+        <comment>商品描述(后台简述）</comment>
+        <data-type>varchar(1000)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="215" parent="17" name="catalog3_id">
+        <comment>三级分类id</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="216" parent="17" name="tm_id">
+        <comment>品牌id</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="217" parent="17" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="218" parent="18" name="id">
+        <comment>id</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="219" parent="18" name="product_id">
+        <comment>商品id</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="220" parent="18" name="sale_attr_id">
+        <comment>销售属性id</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="221" parent="18" name="sale_attr_name">
+        <comment>销售属性名称(冗余)</comment>
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="222" parent="18" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="223" parent="19" name="id">
+        <comment>id</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="224" parent="19" name="product_id">
+        <comment>商品id</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="225" parent="19" name="sale_attr_id">
+        <comment>销售属性id</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="226" parent="19" name="sale_attr_value_name">
+        <comment>销售属性值名称</comment>
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="227" parent="19" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="228" parent="20" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="229" parent="20" name="product_id">
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="230" parent="20" name="create_time">
+        <data-type>datetime</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="231" parent="20" name="vertify_man">
+        <comment>审核人</comment>
+        <data-type>varchar(64)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="232" parent="20" name="status">
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="233" parent="20" name="detail">
+        <comment>反馈详情</comment>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="234" parent="20" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="235" parent="21" name="id">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="236" parent="21" name="attr_id">
+        <comment>属性id（冗余)</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="237" parent="21" name="value_id">
+        <comment>属性值id</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="238" parent="21" name="sku_id">
+        <comment>skuid</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="239" parent="21" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="240" parent="22" name="id">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="241" parent="22" name="sku_id">
+        <comment>商品id</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="242" parent="22" name="img_name">
+        <comment>图片名称（冗余）</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="243" parent="22" name="img_url">
+        <comment>图片路径(冗余)</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="244" parent="22" name="product_img_id">
+        <comment>商品图片id</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="245" parent="22" name="is_default">
+        <comment>是否默认</comment>
+        <data-type>varchar(4000)</data-type>
+        <default-expression>&apos;&apos;0&apos;&apos;</default-expression>
+      </column>
+      <key id="246" parent="22" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="247" parent="23" name="id">
+        <comment>库存id(itemID)</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="248" parent="23" name="product_id">
+        <comment>商品id</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="249" parent="23" name="price">
+        <comment>价格</comment>
+        <data-type>double</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="250" parent="23" name="sku_name">
+        <comment>sku名称</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="251" parent="23" name="sku_desc">
+        <comment>商品规格描述</comment>
+        <data-type>varchar(2000)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="252" parent="23" name="weight">
+        <data-type>double</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="253" parent="23" name="tm_id">
+        <comment>品牌(冗余)</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="254" parent="23" name="catalog3_id">
+        <comment>三级分类id（冗余)</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="255" parent="23" name="sku_default_img">
+        <comment>默认显示图片(冗余)</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <index id="256" parent="23" name="idx_sku_info_sku_name">
+        <columns>sku_name</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="257" parent="23" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="258" parent="24" name="id">
+        <comment>id</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="259" parent="24" name="sku_id">
+        <comment>库存单元id</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="260" parent="24" name="sale_attr_id">
+        <comment>销售属性id（冗余)</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="261" parent="24" name="sale_attr_value_id">
+        <comment>销售属性值id</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="262" parent="24" name="sale_attr_name">
+        <comment>销售属性名称(冗余)</comment>
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="263" parent="24" name="sale_attr_value_name">
+        <comment>销售属性值名称(冗余)</comment>
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="264" parent="24" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="265" parent="25" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="266" parent="25" name="member_level_id">
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="267" parent="25" name="username">
+        <comment>用户名</comment>
+        <data-type>varchar(64)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="268" parent="25" name="password">
+        <comment>密码</comment>
+        <data-type>varchar(64)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="269" parent="25" name="nickname">
+        <comment>昵称</comment>
+        <data-type>varchar(64)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="270" parent="25" name="phone">
+        <comment>手机号码</comment>
+        <data-type>varchar(64)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="271" parent="25" name="status">
+        <comment>帐号启用状态:0-&gt;禁用；1-&gt;启用</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="272" parent="25" name="create_time">
+        <comment>注册时间</comment>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="273" parent="25" name="icon">
+        <comment>头像</comment>
+        <data-type>varchar(500)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="274" parent="25" name="gender">
+        <comment>性别：0-&gt;未知；1-&gt;男；2-&gt;女</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="275" parent="25" name="birthday">
+        <comment>生日</comment>
+        <data-type>date</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="276" parent="25" name="city">
+        <comment>所做城市</comment>
+        <data-type>varchar(64)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="277" parent="25" name="job">
+        <comment>职业</comment>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="278" parent="25" name="personalized_signature">
+        <comment>个性签名</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="279" parent="25" name="source_type">
+        <comment>用户来源</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="280" parent="25" name="integration">
+        <comment>积分</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="281" parent="25" name="growth">
+        <comment>成长值</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="282" parent="25" name="luckey_count">
+        <comment>剩余抽奖次数</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="283" parent="25" name="history_integration">
+        <comment>历史积分数量</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <index id="284" parent="25" name="idx_phone">
+        <columns>phone</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="285" parent="25" name="idx_username">
+        <columns>username</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="286" parent="25" name="idx_phone">
+        <columns>phone</columns>
+        <underlying-index>idx_phone</underlying-index>
+      </key>
+      <key id="287" parent="25" name="idx_username">
+        <columns>username</columns>
+        <underlying-index>idx_username</underlying-index>
+      </key>
+      <key id="288" parent="25" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="289" parent="26" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="290" parent="26" name="name">
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="291" parent="26" name="growth_point">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="292" parent="26" name="default_status">
+        <comment>是否为默认等级：0-&gt;不是；1-&gt;是</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="293" parent="26" name="free_freight_point">
+        <comment>免运费标准</comment>
+        <data-type>decimal(10,2)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="294" parent="26" name="comment_growth_point">
+        <comment>每次评价获取的成长值</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="295" parent="26" name="priviledge_free_freight">
+        <comment>是否有免邮特权</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="296" parent="26" name="priviledge_sign_in">
+        <comment>是否有签到特权</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="297" parent="26" name="priviledge_comment">
+        <comment>是否有评论获奖励特权</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="298" parent="26" name="priviledge_promotion">
+        <comment>是否有专享活动特权</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="299" parent="26" name="priviledge_member_price">
+        <comment>是否有会员价格特权</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="300" parent="26" name="priviledge_birthday">
+        <comment>是否有生日特权</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="301" parent="26" name="note">
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="302" parent="26" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="303" parent="27" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="304" parent="27" name="member_id">
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="305" parent="27" name="name">
+        <comment>收货人名称</comment>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="306" parent="27" name="phone_number">
+        <data-type>varchar(64)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="307" parent="27" name="default_status">
+        <comment>是否为默认</comment>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="308" parent="27" name="post_code">
+        <comment>邮政编码</comment>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="309" parent="27" name="province">
+        <comment>省份/直辖市</comment>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="310" parent="27" name="city">
+        <comment>城市</comment>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="311" parent="27" name="region">
+        <comment>区</comment>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="312" parent="27" name="detail_address">
+        <comment>详细地址(街道)</comment>
+        <data-type>varchar(128)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="313" parent="27" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="314" parent="28" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="315" parent="28" name="name">
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="316" parent="28" name="address">
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="317" parent="28" name="areacode">
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <index id="318" parent="28" name="id">
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="319" parent="28" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="320" parent="29" name="id">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="321" parent="29" name="order_id">
+        <comment>订单编号</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="322" parent="29" name="consignee">
+        <comment>收货人</comment>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="323" parent="29" name="consignee_tel">
+        <comment>收货人电话</comment>
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="324" parent="29" name="delivery_address">
+        <comment>送货地址</comment>
+        <data-type>varchar(1000)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="325" parent="29" name="order_comment">
+        <comment>订单备注</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="326" parent="29" name="payment_way">
+        <comment>付款方式 1:在线付款 2:货到付款</comment>
+        <data-type>varchar(2)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="327" parent="29" name="task_status">
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="328" parent="29" name="order_body">
+        <comment>订单描述</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="329" parent="29" name="tracking_no">
+        <comment>物流单号</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="330" parent="29" name="create_time">
+        <comment>创建时间</comment>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="331" parent="29" name="ware_id">
+        <comment>仓库编号</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="332" parent="29" name="task_comment">
+        <comment>工作单备注</comment>
+        <data-type>varchar(500)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="333" parent="29" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="334" parent="30" name="id">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="335" parent="30" name="sku_id">
+        <comment>sku_id</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="336" parent="30" name="sku_name">
+        <comment>sku名称</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="337" parent="30" name="sku_nums">
+        <comment>购买个数</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="338" parent="30" name="task_id">
+        <comment>工作单编号</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="339" parent="30" name="sku_num">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <key id="340" parent="30" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="341" parent="31" name="id">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="342" parent="31" name="sku_id">
+        <comment>skuid</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="343" parent="31" name="warehouse_id">
+        <comment>仓库id</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="344" parent="31" name="stock">
+        <comment>库存数</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="345" parent="31" name="stock_name">
+        <comment>存货名称</comment>
+        <data-type>varchar(200)</data-type>
+        <default-expression>&apos;NULL&apos;</default-expression>
+      </column>
+      <column id="346" parent="31" name="stock_locked">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <index id="347" parent="31" name="idx_skuid">
+        <columns>sku_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="348" parent="31" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
